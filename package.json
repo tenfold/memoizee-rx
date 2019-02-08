@@ -1,7 +1,7 @@
 {
   "name": "memoizee-rx",
   "version": "1.0.0",
-  "description": "",
+  "description": "Use memoizee with rxjs Observables",
   "main": "index.js",
   "scripts": {
     "test": "jest --config jestconfig.json",
@@ -10,7 +10,7 @@
     "lint": "tslint -p tsconfig.json",
     "publish": "npm run build && publish-to-git --force"
   },
-  "author": "",
+  "author": "Damian Kaczmarek <rush@tenfold.com>",
   "license": "UNLICENSED",
   "private": true,
   "devDependencies": {
