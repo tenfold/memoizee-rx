@@ -9,7 +9,7 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "publish": "npm run build && publish-to-git --force"
+    "publish": "npm run build && publish-to-git"
   },
   "author": "Damian Kaczmarek <rush@tenfold.com>",
   "license": "UNLICENSED",
