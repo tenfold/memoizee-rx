@@ -1,6 +1,6 @@
 {
   "name": "memoizee-rx",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Use memoizee with rxjs Observables",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
