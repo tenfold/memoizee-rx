@@ -3,7 +3,9 @@ import { Observable, Subject } from 'rxjs';
 import { shareReplay, takeUntil } from 'rxjs/operators';
 
 type ObservableFunction<T> = (...args: any[]) => Observable<T>;
-export function memoizeeRx<T>(toWrap: ObservableFunction<T>, options: memoizee.Options = {}): ObservableFunction<T> {
+type MemoizedObservableFunction<T> = ObservableFunction<T> & memoizee.Memoized<ObservableFunction<T>>;
+
+export function memoizeeRx<T>(toWrap: ObservableFunction<T>, options: memoizee.Options = {}): MemoizedObservableFunction<T> {
     const disposeSymbol = Symbol('___dispose');
     const newOptions: memoizee.Options = Object.assign(
         {
