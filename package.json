@@ -8,7 +8,7 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "publish": "publish-to-git"
+    "publish": "npm run build && publish-to-git --force"
   },
   "author": "",
   "license": "UNLICENSED",

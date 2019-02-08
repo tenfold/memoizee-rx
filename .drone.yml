@@ -1,0 +1,29 @@
+pipeline:
+  install:
+    image: node:8
+    environment:
+      - JOBS=8
+    commands:
+      - npm ci
+  build:
+    image: node:8
+    commands:
+      - npm build
+  test:
+    image: node:8
+    secrets: [ codecov_token ]
+    commands:
+      - npm test -- --coverage
+  upload-coverage:
+    image: node:8
+    secrets: [ codecov_token ]
+    commands:
+      - "bash -c 'bash <(curl -s https://codecov.io/bash)'"
+  publish-to-git:
+    image: node:8
+    commands:
+      - git config --global user.email "admin@drone"
+      - git config --global user.name "Drone CI"
+      - npx publish-to-git --force
+    when:
+      event: tag

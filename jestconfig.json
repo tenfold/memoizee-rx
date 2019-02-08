@@ -3,5 +3,16 @@
     "^.+\\.(t|j)sx?$": "ts-jest"
   },
   "testRegex": "(/test/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-  "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
+  "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+  "collectCoverageFrom": [
+    "src/**/*.js",
+    "src/**/*.ts"
+  ],
+  "coverageDirectory": "coverage",
+  "coveragePathIgnorePatterns": [
+    "/node_modules"
+  ],
+  "coverageReporters": [
+    "lcov"
+  ]
 }
