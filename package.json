@@ -2,7 +2,8 @@
   "name": "memoizee-rx",
   "version": "1.0.0",
   "description": "Use memoizee with rxjs Observables",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
